@@ -22,4 +22,5 @@ As of first commit, this code was never written to be readable, I am sorry.
 
 ## Usage
 
-Run findmyiphonenow.py using Python35 with selenium installed
+Add your login and password to the code.
+Run findmyiphonenow.py using Python35 with selenium installed.
