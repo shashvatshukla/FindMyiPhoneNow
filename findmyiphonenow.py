@@ -1,17 +1,20 @@
 import selenium
 from selenium import webdriver
+from ConfigParser import SafeConfigParser
 
 url = "https://www.icloud.com/"
 
 driver = webdriver.Firefox()
 driver.get(url)
-
 driver.implicitly_wait(10)
 
+config = SafeConfigParser()
+config.read('config.ini')
+
 username = driver.find_element_by_class_name("padding").find_element_by_class_name("field")
-username.send_keys("email")
+username.send_keys(config.get('apple-account', 'email'))
 password = driver.find_element_by_xpath("//div[contains(@class, 'password')]")
-password.send_keys("password")  # think of a way to not store password in plain text
+password.send_keys(config.get('apple-account', 'password'))
 
 go = driver.find_element_by_xpath("//div[contains(@class, 'submit')]")
 go.click()
