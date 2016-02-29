@@ -8,19 +8,14 @@ It would be great to do it in just one click.
 
 ## Solution (Current attempt)
 
-Using the Python library Selenium to simulate clicks and login so that the process is automated.
+Using the Python library [Selenium](http://selenium-python.readthedocs.org/) to simulate clicks and login so that the process is automated.
 
-Look at the page html to find the id of the button to be clicked on and tell selenium that. 
+Look at the page html to find the xpath of the button to be clicked on and tell selenium that. 
 
 As of first commit, this code was never written to be readable, I am sorry.
 
-## Problems faced
-
-- icloud.com changes the id of the elements so the code becomes unusable after some time, it would be great to have a way of keeping to date with them.
-
-- Seems like selenium can't find some elements
 
 ## Usage
 
-Add your login and password to the code.
-Run findmyiphonenow.py using Python35 with selenium installed.
+Add your email and password to [config.ini](config.ini).
+Run `python findmyiphonenow.py` with Selenium installed.
